@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch</title>
+
+    <style>
+        *{
+            font-size: 16px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .container{
+            display: flex;
+            width: 30rem;
+            height: 20rem;
+            margin: 2rem auto;
+            border: 1px solid gray;
+            box-shadow: 0.5rem .5rem .3rem .01rem gray;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container"></div>
+    <script>
+        /*
+        Estrutura condicional switch-case
+        Variavel
+        Entrada e saida de dados
+        */
+        var produto = prompt("Informe o produto")
+
+        switch (produto.toLowerCase()) {
+            case "arroz":
+                document.write("<div class = 'produto'>Voce escolheu arroz</div>")
+                document.write("<div class = 'preco'>R$6,79</div>")
+                break;
+            case "feijao":
+                document.write("<div class = 'aviso'>A palavra 'feijao' tem ~</div>")
+            case "feijão":
+                document.write("<div class = 'produto'>Voce escolheu feijao</div>")
+                document.write("<div class = 'preco'>R$7,79</div>")
+                break;
+            case "cafe":
+            case "café":
+                document.write("<div class = 'produto'>Voce escolheu cafe</div>")
+                document.write("<div class = 'preco'>R$9,79</div>")
+                break;
+            default:
+                document.write("<div class = 'erro'>Produto não identificado</div>")
+        }
+    </script>
+
+</body>
+
+</html>
